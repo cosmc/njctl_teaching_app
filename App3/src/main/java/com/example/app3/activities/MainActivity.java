@@ -1,8 +1,7 @@
-package com.example.app3;
+package com.example.app3.activities;
 
-import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
@@ -10,7 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+
+import com.example.app3.R;
+import com.example.app3.activities.ClassesActivity;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -41,6 +42,14 @@ public class MainActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
+            case R.id.action_my_classes:
+                Intent i = new Intent(this, ClassesActivity.class);
+                startActivity(i);
+
+
+                return true;
+            case R.id.action_discover:
+                return true;
             case R.id.action_settings:
                 return true;
         }

@@ -1,8 +1,10 @@
 package com.example.app3.activities;
 
 import android.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.example.app3.R;
 import com.example.app3.activities.ClassesActivity;
+import com.example.app3.ClassesFragment;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -20,11 +23,11 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        if (savedInstanceState == null) {
-//            getFragmentManager().beginTransaction()
-//                    .add(R.id.container, new PlaceholderFragment())
-//                    .commit();
-//        }
+        if (savedInstanceState == null) {
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.add(R.id.container, new ClassesFragment());
+            transaction.commit();
+        }
     }
 
 

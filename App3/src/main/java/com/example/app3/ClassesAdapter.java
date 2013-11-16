@@ -14,17 +14,13 @@ import java.util.ArrayList;
  */
 class ClassesAdapter extends ArrayAdapter {
 
-    public ArrayList<NJCTLClass> classes;
-
-    public void setClasses(ArrayList<NJCTLClass> classes) { this.classes = classes; }
-
+    private ArrayList<NJCTLClass> classes;
 
     class ViewHolder {
         TextView classNameTextView;
         TextView progressTextView;
         TextView unitsTextView;
     }
-
 
     public ClassesAdapter(Context context, int resource, ArrayList<NJCTLClass> classes) {
         super(context, resource, classes);

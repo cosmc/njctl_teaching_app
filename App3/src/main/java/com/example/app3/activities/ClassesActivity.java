@@ -81,28 +81,28 @@ public class ClassesActivity extends ActionBarActivity {
         }
     }
 
+//    public static class MyClassesAdapter extends SimpleAdapter {
+//        class ViewHolder {
+//            TextView text;
+//            ImageView image;
+//        }
+//        @Override
+//        public View getView(int position, View convertView, ViewGroup parent) {
+//            View view = convertView;
+//            ViewHolder holder;
+//            if (view == null) {
+//                // Inflate view
+//                view = inflater.inflate();
+//                holder = new ViewHolder();
+//                holder.image = (ImageView) view.findViewById(R.id.image);
+//                holder.text = (TextView) view.findViewById(R.id.image);
+//                view.setTag(holder);
+//            } else {
+//                holder = (ViewHolder) view.getTag();
+//            }
+//
+//            return view;
+//        }
+//    }
 }
 
-private class ClassesAdapter extends ArrayAdapter<NJCTLClass> {
-    class ViewHolder {
-        TextView text;
-        ImageView image;
-    }
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView;
-        ViewHolder holder;
-        if (view == null) {
-            // Inflate view
-            view = inflater.inflate();
-            holder = new ViewHolder();
-            holder.image = (ImageView) view.findViewById(R.id.image);
-            holder.text = (TextView) view.findViewById(R.id.image);
-            view.setTag(holder);
-        } else {
-            holder = (ViewHolder) view.getTag();
-        }
-
-        return super.getView(position, convertView, parent);
-    }
-}
